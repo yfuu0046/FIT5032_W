@@ -27,7 +27,8 @@ namespace FIT5032_MyCodeSnippet.Models.Exercise
             Student s1 = new Student("Russel", "0423456789");
             Student s2 = new Student("Jian", "0456789123");
             studentDictionary.Add(1, s1);
-            studentDictionary.Add(2, s2);
+            studentDictionary.Add(2, s2);\
+            //WEWE
             Student result = new Student("", "");
 
             studentDictionary.TryGetValue(1, out result);
