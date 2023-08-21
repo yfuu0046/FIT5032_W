@@ -1,9 +1,12 @@
-﻿using FIT5032_Week03.HelloWorld;
+﻿using FIT5032_MyCodeSnippet.Models.Exercise;
+using FIT5032_Week03.HelloWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
+
 
 namespace FIT5032_MyCodeSnippet.Controllers
 {
@@ -16,12 +19,16 @@ namespace FIT5032_MyCodeSnippet.Controllers
 
         public ActionResult About()
         {
-            // I commented this line out
-            //ViewBag.Message = "Your application description page.";
-            // I created an instance of the Hello object
+            
+            ViewBag.Message = "Your application description page.";
+            
             Hello hello = new Hello();
-            // I assigned the ViewBag.Message to the result
+            
             ViewBag.Message = hello.GetHello();
+
+            ExampleDictionary ed = new ExampleDictionary();
+
+            ed.Example();
 
             return View();
         }
